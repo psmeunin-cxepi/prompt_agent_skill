@@ -1,6 +1,6 @@
 # System Prompt Template Guide
 
-This document outlines the structure and usage of the [system_prompt_template.txt](./system_prompt_template.txt). 
+This document outlines the structure and usage of the canonical system prompt template.
 This template is designed to standardize how system prompts are constructed for AI agents.
 
 ## Purpose
@@ -42,7 +42,6 @@ The goal of this template is to ensure consistency, reliability, and maintainabi
   - Non-Fabrication Rule: The agent must never invent tool outputs, retrieved data, or action outcomes.
 - **Why it matters**: Tool bindings define what capabilities exist, but not the policy for using them. This section guides safe, reliable, and predictable tool use.
 
-
 ### 6. Output Format
 **Purpose**: To ensure the downstream application can parse the agent's response.
 - **Content**: Strict schema definitions (JSON, specific Markdown headers, etc.).
@@ -70,3 +69,9 @@ The goal of this template is to ensure consistency, reliability, and maintainabi
 1.  **Copy the Template**: Start every new prompt by copying this structure.
 2.  **Remove Comments**: Delete the explanatory HTML comments (`<!-- ... -->`) in the final production prompt to save context window tokens.
 3.  **Iterate**: Use the "Examples" section to fix recurring failures observed during testing.
+
+---
+
+> **Note for skill users:** This is a portable copy bundled with the `prompt-auditor` skill.
+> The source of truth is `system-prompt-guide.md` at the root of the `prompt-review-agent` repository.
+> If you maintain a fork of this skill, keep this file in sync with the upstream source.
